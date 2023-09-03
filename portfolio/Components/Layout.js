@@ -1,4 +1,5 @@
 import {Sora} from '@next/font/google'
+import Nav from './Nav';
 
 const sora = Sora({
     subsets: ['latin'],
@@ -6,10 +7,12 @@ const sora = Sora({
     weight: ['100', '200', '300', '400', '500', '600','700', '800']
 });
 
-const Layout = () => {
+import Nav from '../Components/Nav'
+
+const Layout = ({children}) => {
     return (
         <div>
-            Layout
+            <Nav />
         </div>
     );
 }
