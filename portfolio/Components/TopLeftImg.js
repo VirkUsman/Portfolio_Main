@@ -1,7 +1,10 @@
+import Image from "next/image"
+
+
 const TopLeftImg = () => {
     return (
         <div>
-            TopLeftImg
+            <Image src='/top-left-img.png' />
         </div>
     );
 }
