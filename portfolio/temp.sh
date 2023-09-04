@@ -1,9 +1,9 @@
 #!/bin/bash
 git status
-sleep 4
+sleep 1
 git add --all
-sleep 2
+sleep 1
 git commit -am "Git hub Updated"
-sleep 2
+sleep 1
 git push
 
