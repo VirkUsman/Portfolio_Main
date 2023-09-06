@@ -24,26 +24,20 @@ module.exports = {
       colors: {
         primary: '#131424',
         secondary: '#393A47',
-        accent: '#F13024',
+        accent: '#00cccc',
+        red: '#F13024',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
-        circleStar2: 'url("/circleStar2.svg")'
+        circleStar2: 'url("/circleStar2.svg")',
+        forest: 'url("/forest.png")',
+        space: 'url("/space.png")',
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite',
-        'no-spin': 'spin 6s linear infinite',
-        'reverse-spin': 'reverse-spin 6s linear infinite'
-      },
-      keyframes: {
-        "reverse-spin": {
-          from: {
-            transform: 'rotate(360deg)'
-          },
-        }
       },
       fontFamily: {
         poppins: [`var(--font-poppins)`, 'sans-serif'],

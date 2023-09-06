@@ -8,7 +8,6 @@ import {
   } from 'react-icons/hi2';
 
   import Link from 'next/link';
-
   import { useRouter } from 'next/router'
   
   // nav data
@@ -47,7 +46,7 @@ import {
                   </div>
                   </div>
                   </div>
-
+                  {/* Icon */}
                   <div>
                   {link.icon}
                   </div>

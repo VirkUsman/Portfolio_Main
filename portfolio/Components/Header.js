@@ -1,10 +1,8 @@
-
-
 const Header = () => {
     return (
-        <header className="absolute z-30 w-full">
+        <div>
             Header
-        </header>
+        </div>
     );
 }
 

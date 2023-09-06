@@ -47,12 +47,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
+      <div className="w-[1600px] h-full absolute right-0 bottom-0">
+        <div className="bg-none xl:bg-space xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
         </div>
         <div>Particles</div>
-        <div>
-        <Avatar />
+        <div className=" max-w-[500] max-h-[600] mix-blend-hard-light absolute -bottom-32 lg:bottom-16 lg:right-[8%]">
+       
         </div>
       </div>
     </div>
@@ -60,3 +60,4 @@ const Home = () => {
 };
 
 export default Home;
+// w-full h-full max-w-[625] max-h-[800] absolute -bottom-32 lg:bottom-0 lg:right-[8%]
