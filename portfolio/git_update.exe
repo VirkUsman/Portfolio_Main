@@ -1,8 +1,0 @@
-@echo
-cls
-echo this is my attempt to make an exe file
-pause
-git add --all
-pause
-git status
-stop
