@@ -3,8 +3,8 @@ import ParticlesContainer from "../Components/ParticlesContainer";
 import ProjectsBtn from "../Components/ProjectsBtn";
 import Avatar from "../Components/Avatar";
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import {motion} from "framer-motion";
+import {fadeIn} from "../variants";
 
 const Home = () => {
   return (

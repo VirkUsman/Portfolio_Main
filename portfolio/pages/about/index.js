@@ -89,7 +89,13 @@ import {
   ];
   
   const About = () => {
-    return <div>About</div>;
+    return <div> <div class="flex items-center justify-center h-screen">
+    <ul>
+      <li>
+        <a class="hover:text-white hover:bg-purple-600 hover:border-gray-300 border-2 rounded-sm p-3" href="#">It Works!</a>
+      </li>
+    </ul>
+  </div></div>;
   };
   
   export default About;
