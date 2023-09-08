@@ -3,8 +3,8 @@ import ParticlesContainer from "../Components/ParticlesContainer";
 import ProjectsBtn from "../Components/ProjectsBtn";
 import Avatar from "../Components/Avatar";
 
-import {motion} from "framer-motion";
-import {fadeIn} from "../variants";
+import { easeInOut, motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
             className="h1"
           >
             Alchemizing Concepts <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>{" "}
+            <span className="text-space">Digital Reality</span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
@@ -40,7 +40,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex"
+            className="hidden xl:flex justify-start"
           >
             <ProjectsBtn />
           </motion.div>
@@ -48,12 +48,21 @@ const Home = () => {
       </div>
 
       <div className="w-[1600px] h-full absolute right-0 bottom-0">
-        <div className="bg-none xl:bg-space xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
-        </div>
-        <div>Particles</div>
-        <div className=" max-w-[500] max-h-[600] mix-blend-hard-light absolute -bottom-32 lg:bottom-16 lg:right-[8%]">
-       
-        </div>
+        <div className="bg-none xl:bg-space xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
+
+        {/* <ParticlesContainer /> */}
+
+
+        <motion.div
+          variants={fadeIn("up", 0.7)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          transition={{duration: 1, ease: easeInOut}}
+          className="max-w-[400] max-h-[500] mix-blend-color-dodge absolute -bottom-32 lg:bottom-16 lg:right-[8%]"
+        >
+          <Avatar />
+        </motion.div>
       </div>
     </div>
   );
