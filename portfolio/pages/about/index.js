@@ -97,7 +97,7 @@ import { fadeIn } from "../../variants";
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
+  console.log(index)
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
@@ -112,8 +112,8 @@ const About = () => {
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div>text</div>
-        <div>
-          <div className="">
+        <div >
+        <div className="flex gap-x-4" >
             {aboutData.map((item, itemIndex) => {
               return <div key={itemIndex} className= { ` ${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`} onClick={() => setIndex(itemIndex)} >{item.title}</div>
             })}
