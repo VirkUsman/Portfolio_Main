@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
           <Link href={"/"}>
-            <Image src={'/logo.svg'} width={220} height={48} alt="" priority={true} />
+            <Image src={'/UV_LOGO1.svg'} width={220} height={48} alt="" priority={true} />
             {/* <svg height="80" width="300">
               <text
                 x="0"
