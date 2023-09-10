@@ -117,31 +117,49 @@ const About = () => {
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* Main Text Plus Intro */}
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="h2">
+          <motion.h2
+            variants={fadeIn("right", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2"
+          >
             Creativity Is <span className="text-space">Intelligence</span>{" "}
             Having Fun.
-          </h2>
-          <p className="mx-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 ">
+          </motion.h2>
+          <motion.p
+            variants={fadeIn("right", 0.8)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="mx-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 "
+          >
             4 years ago, I began my journey as a developer. Since then, I've
             created in my team 14 web products. Optimized numerous applications
             for max-speed and scalability. Mentored my junior team members.
             Ensured the technical feasibility of 150+ UI/UX designs.
-          </p>
-{/* experience counter */}
-          <div>
+          </motion.p>
+          {/* experience counter */}
+          <motion.div
+            variants={fadeIn("right", 1.0)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+          >
             <div className="flex flex-1 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
-                  <CountUp start={0} end={4} duration={5} /> +
+                  <CountUp start={0} end={4} duration={10} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
                 </div>
               </div>
               {/* 2nd Counter */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
-                  <CountUp start={0} end={14} duration={5} /> +
+                  <CountUp start={0} end={14} duration={10} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Web Products
@@ -157,7 +175,7 @@ const About = () => {
                 </div>
               </div>
               {/* Unused Counter No.2 */}
-              <div className="relative flex-1 hidden">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 hidden">
                 <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
                   <CountUp start={0} end={500} duration={5} /> +
                 </div>
@@ -166,19 +184,24 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Information */}
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <motion.div
+          variants={fadeIn("left", 0.8)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className={` ${
-                    index === itemIndex &&
-                    "text-space after:w-[100%] after:bg-accent  after:transition-all after:duration-300"
+                  className={`${index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-xyz after:transition-all after:duration-300 "
                   } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
@@ -206,7 +229,7 @@ const About = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
