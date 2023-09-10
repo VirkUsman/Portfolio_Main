@@ -117,6 +117,7 @@ const About = () => {
       </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+<<<<<<< HEAD
         <div className="flex-1 flex flex-col justify-center">
           <h2 className="h2">
             Creativity Is <span className="text-space">Intelligence</span>{" "}
@@ -144,6 +145,11 @@ const About = () => {
         </div>
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+=======
+        <div className="flex-1 flex flex-col justify-center">text</div>
+        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4" >
+>>>>>>> ca99e4321ef45e3488806a966d08ebf501463eaa
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -159,6 +165,7 @@ const About = () => {
               );
             })}
           </div>
+<<<<<<< HEAD
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
@@ -177,6 +184,17 @@ const About = () => {
                 </div>
               );
             })}
+=======
+          <div>
+            {aboutData[index].info.map((item, itemIndex) => {
+              return (
+                <div key={itemIndex}>
+                  <div>{item.title}</div>
+                </div>
+              )
+            })}
+          </div>
+>>>>>>> ca99e4321ef45e3488806a966d08ebf501463eaa
           </div>
         </div>
       </div>
