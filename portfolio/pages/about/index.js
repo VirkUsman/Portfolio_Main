@@ -97,17 +97,15 @@ import { fadeIn } from "../../variants";
 
 import CountUp from "react-countup";
 
-
 const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
-
       <Circles />
 
       <motion.div
-        variants={fadeIn('right', 0.2)}
+        variants={fadeIn("right", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
@@ -117,7 +115,7 @@ const About = () => {
       </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-<<<<<<< HEAD
+        {/* Main Text Plus Intro */}
         <div className="flex-1 flex flex-col justify-center">
           <h2 className="h2">
             Creativity Is <span className="text-space">Intelligence</span>{" "}
@@ -129,27 +127,51 @@ const About = () => {
             for max-speed and scalability. Mentored my junior team members.
             Ensured the technical feasibility of 150+ UI/UX designs.
           </p>
-       
-        <div>
+{/* experience counter */}
           <div>
-            <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-              <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
-                <CountUp start={0} end={4} duration={5} /> +
+            <div className="flex flex-1 xl:gap-x-6">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
+                  <CountUp start={0} end={4} duration={5} /> +
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Years of experience
+                </div>
               </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                Years of experience
+              {/* 2nd Counter */}
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
+                  <CountUp start={0} end={14} duration={5} /> +
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Web Products
+                </div>
+              </div>
+              {/* Unused Counter No.1 */}
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 hidden">
+                <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
+                  <CountUp start={0} end={250} duration={5} /> +
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Not Used 1
+                </div>
+              </div>
+              {/* Unused Counter No.2 */}
+              <div className="relative flex-1 hidden">
+                <div className="text-2xl xl:text-4xl font-extrabold text-space mb-2">
+                  <CountUp start={0} end={500} duration={5} /> +
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Not Used 2
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
+
+        {/* Information */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-=======
-        <div className="flex-1 flex flex-col justify-center">text</div>
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
-        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4" >
->>>>>>> ca99e4321ef45e3488806a966d08ebf501463eaa
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -165,7 +187,6 @@ const About = () => {
               );
             })}
           </div>
-<<<<<<< HEAD
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
@@ -174,7 +195,7 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
+                  <div className="hidden md:flex">--</div>
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
@@ -184,17 +205,6 @@ const About = () => {
                 </div>
               );
             })}
-=======
-          <div>
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div key={itemIndex}>
-                  <div>{item.title}</div>
-                </div>
-              )
-            })}
-          </div>
->>>>>>> ca99e4321ef45e3488806a966d08ebf501463eaa
           </div>
         </div>
       </div>
