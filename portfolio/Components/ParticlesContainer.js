@@ -1,6 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import React, { useCallback } from "react";
+import { FaTwitter } from "react-icons/fa";
 
 const ParticlesContainer = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -35,8 +36,8 @@ const ParticlesContainer = () => {
               mode: "attract",
               parallax: {
                 enable: false,
-                force: 60,
-                smooth: 10,
+                force: 90,
+                smooth: 20,
               },
             },
             resize: true,
@@ -75,7 +76,7 @@ const ParticlesContainer = () => {
               default: "bounce",
             },
             random: false,
-            speed: 1,
+            speed: 2,
             straight: false,
           },
           number: {
@@ -89,10 +90,10 @@ const ParticlesContainer = () => {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: "circle"
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 2, max: 5 },
           },
         },
         detectRetina: true,
