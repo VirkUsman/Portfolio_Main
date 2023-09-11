@@ -1,6 +1,3 @@
-// import { RxAccessibility } from "react-icons/rx";
-
-// export const serviceData = [];
 
 import ServiceSlider from "../../Components/ServiceSlider";
 import Bulb from "../../Components/Bulb";
