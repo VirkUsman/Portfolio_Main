@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ParticlesContainer from "../../Components/ParticlesContainer";
 
 // icons
 import {
@@ -117,6 +118,9 @@ const About = () => {
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* Main Text Plus Intro */}
         <div className="flex-1 flex flex-col justify-center">
+
+        <ParticlesContainer />
+        
           <motion.h2
             variants={fadeIn("right", 0.6)}
             initial="hidden"
