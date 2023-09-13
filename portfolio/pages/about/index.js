@@ -26,18 +26,22 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          { id: 1, title: <FaHtml5 /> },
+          { id: 2, title: <FaCss3 /> },
+          { id: 3, title: <FaJs /> },
+          { id: 4, title: <FaReact /> },
+          { id: 5, title: <SiNextdotjs /> },
+          { id: 6, title: <SiFramer /> },
+          { id: 7, title: <FaWordpress /> },
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          { id: 1, title: <FaFigma /> },
+          { id: 2, title: <SiAdobexd /> },
+          { id: 3, title: <SiAdobephotoshop /> },
+        ],
       },
     ],
   },
@@ -118,9 +122,8 @@ const About = () => {
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* Main Text Plus Intro */}
         <div className="flex-1 flex flex-col justify-center">
+          <ParticlesContainer />
 
-        <ParticlesContainer />
-        
           <motion.h2
             variants={fadeIn("right", 0.6)}
             initial="hidden"
@@ -138,10 +141,10 @@ const About = () => {
             exit="hidden"
             className="mx-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 "
           >
-            4 years ago, I began my journey as a developer. Since then, I've
-            created in my team 14 web products. Optimized numerous applications
-            for max-speed and scalability. Mentored my junior team members.
-            Ensured the technical feasibility of 150+ UI/UX designs.
+            4 years ago, I began my journey as a developer. Since then, I
+            &#39;ve created in my team 14 web products. Optimized numerous
+            applications for max-speed and scalability. Mentored my junior team
+            members. Ensured the technical feasibility of 150+ UI/UX designs.
           </motion.p>
           {/* experience counter */}
           <motion.div
@@ -204,7 +207,8 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className={`${index === itemIndex &&
+                  className={`${
+                    index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-xyz after:transition-all after:duration-300 "
                   } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
@@ -226,7 +230,11 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white">{icon}</div>;
+                      return (
+                        <div className="text-2xl text-white" key={itemIndex}>
+                          {icon.title}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
