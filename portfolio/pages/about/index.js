@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import ParticlesContainer from "../../Components/ParticlesContainer";
 
-// icons
+
 import {
   FaHtml5,
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
+  FaBootstrap,
   FaFigma,
+  FaVuejs,
 } from "react-icons/fa";
 
 import {
@@ -16,9 +17,11 @@ import {
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
-//  data
+
 const aboutData = [
   {
     title: "skills",
@@ -28,11 +31,14 @@ const aboutData = [
         icons: [
           { id: 1, title: <FaHtml5 /> },
           { id: 2, title: <FaCss3 /> },
-          { id: 3, title: <FaJs /> },
-          { id: 4, title: <FaReact /> },
-          { id: 5, title: <SiNextdotjs /> },
-          { id: 6, title: <SiFramer /> },
-          { id: 7, title: <FaWordpress /> },
+          { id: 3, title: <FaBootstrap /> },
+          { id: 4, title: <FaJs /> },
+          { id: 5, title: <FaReact /> },
+          { id: 6, title: <SiNextdotjs /> },
+          { id: 7, title: <SiFramer /> },
+          { id: 8, title: <SiTailwindcss /> },
+          { id: 9, title: <SiTypescript /> },
+          { id: 10, title: <FaVuejs /> },
         ],
       },
       {
@@ -40,7 +46,6 @@ const aboutData = [
         icons: [
           { id: 1, title: <FaFigma /> },
           { id: 2, title: <SiAdobexd /> },
-          { id: 3, title: <SiAdobephotoshop /> },
         ],
       },
     ],
@@ -49,29 +54,45 @@ const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Gold Medal- M.Sc. - IIUI University",
+        stage: "2009 - 2011",
       },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
+      // {
+      //   title: "Adobe Design Achievement Awards - Finalist",
+      //   stage: "2009 - 2010",
+      // },
     ],
   },
   {
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Frontend Web Developer - Liaison Inc, USA.",
+        stage: "2020 - ",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Sales and Marketing Manager - Salman Shahzaib Ent.",
+        stage: "2011 - 2020",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Admin Manager - Dynamic Crop Sciences",
+        stage: "2003 - 2009",
+      },
+      {
+        title: "Agro Farm Manager - Dynamic Crop Sciences",
+        stage: "2007 - 2009",
+      },
+      {
+        title: "General Manager - Elite Agro Services",
+        stage: "2000 - 2003",
+      },
+      {
+        title: "Warehouse Manager - Elite Agro Services",
+        stage: "1998 - 2000",
+      },
+      {
+        title: "Intern - Elite Agro Services",
+        stage: "1997 - 1998",
       },
     ],
   },
@@ -79,16 +100,40 @@ const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
+        title: "CS50 - X -- Harvard University, Cambridge, MA, USA.",
+        stage: "2023",
+      },
+      {
+        title: "CS50 - Python -- Harvard University, Cambridge, MA, USA.",
+        stage: "2023",
+      },
+      {
+        title: "CS50 - Web -- Harvard University, Cambridge, MA, USA.",
+        stage: "2023",
+      },
+      {
+        title: "Responsive Web Design - freeCodeCamp",
+        stage: "2023",
+      },
+      {
+        title: "JavaScript Algorithms & Data Structures - freeCodeCamp",
+        stage: "2023",
+      },
+      {
+        title: "Frontend Development Libraries - freeCodeCamp",
+        stage: "2023",
+      },
+      {
+        title: "M.Sc. Media & Communication Studies - IIUI",
         stage: "2011",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+        title: "Bachlor of Journalism - Bahauddin Zakariya University",
+        stage: "2003",
       },
       {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "REALSCHULABSCHLUSS - BISE-Multan",
+        stage: "1998",
       },
     ],
   },
@@ -107,6 +152,7 @@ const About = () => {
   console.log(index);
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+      
       <Circles />
 
       <motion.div
@@ -114,7 +160,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="hidden xl:flex absolute bottom-0 -left-[370px] "
       >
         <Avatar />
       </motion.div>
@@ -218,7 +264,7 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className=" overflow-auto py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
@@ -227,7 +273,7 @@ const About = () => {
                 >
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">--</div>
-                  <div>{item.stage}</div>
+                  <div className="text-space" >{item.stage}</div>
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
                       return (

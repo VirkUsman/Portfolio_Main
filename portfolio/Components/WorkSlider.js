@@ -4,40 +4,42 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "Liaison Inc",
+          path: "/Project1.png",
+          link: "https://liaisonco.com/",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "Sample Dinner Website",
+          path: "/Project2.png",
+          link: "https://mv-dinner-basic.netlify.app/",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "New Project Soon",
+          path: "/New_Project_Soon.png",
         },
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "New Project Soon",
+          path: "/New_Project_Soon.png",
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "New Project Soon",
+          path: "/New_Project_Soon.png",
         },
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "New Project Soon",
+          path: "/New_Project_Soon.png",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "New Project Soon",
+          path: "/New_Project_Soon.png",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "New Project Soon",
+          path: "/New_Project_Soon.png",
         },
       ],
     },
@@ -80,7 +82,7 @@ const WorkSlider = () => {
                         <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                           <div className="delay-150">LIVE</div>
                           <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">PROJECT</div>
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-300" ><BsArrowRight /></div>
+                          <a className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-300" href={image.link} ><BsArrowRight /></a>
                         </div>
                       </div>
                     </div>

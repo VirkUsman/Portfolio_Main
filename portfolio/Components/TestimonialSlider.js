@@ -1,26 +1,26 @@
 // testimonial data
 const testimonialData = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    image: "/Ali_Mehfooz.jpg",
+    name: "Ali Mehfooz",
+    position: "HR Manager - Liaison Co",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Not only was Usman work on-time and to spec, he pays attention to improve the aesthetics of the site as well as the functionality. Throughout the entire process he is responsive, and willing to work through issues as they arise. It’s obvious he takes tremendous pride in his work, and I wouldn’t hesitate to recommend him.",
   },
-  {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
-    message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
-  },
-  {
-    image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
-    message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
-  },
+  // {
+  //   image: "/t-avt-22.png",
+  //   name: "Frau Kalz - Schützenhof Deli",
+  //   position: "Founder & General Manager",
+  //   message:
+  //     "I always found Maria hardworking and valuable member of the team.",
+  // },
+  // {
+  //   image: "/Hassan_Raza.jpg",
+  //   name: "Hassan Raza - Salman Shahzaib Enterprises",
+  //   position: "Architect & Team Memeber",
+  //   message:
+  //     "Maria Virk is a brilliant and sharp minded personality. I have the fortune of working with Maria on a very regular basis. Every single project is done in a timely fashion and is delivered exactly as is outlined.",
+  // },
 ];
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,7 +41,7 @@ const TestimonialSlider = () => {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="h-[400px]"
+      className="h-[400px] sm:h-[520px]"
     >
       {testimonialData.map((person, index) => {
         return (
@@ -58,8 +58,10 @@ const TestimonialSlider = () => {
                       className=""
                     />
                   </div>
-                  <div className="text-lg" >{person.name}</div>
-                  <div className="text-[12px] uppercase font-extralight tracking-widest">{person.position}</div>
+                  <div className="text-lg">{person.name}</div>
+                  <div className="text-[12px] uppercase font-extralight tracking-widest">
+                    {person.position}
+                  </div>
                 </div>
               </div>
               <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">

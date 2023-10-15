@@ -20,27 +20,32 @@ const serviceData = [
   {
     icon: <RxCrop />,
     title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Branding is the creative, strategic process of telling potential customers what your company is all about.",
   },
-  {
-    icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
+  // {
+  //   icon: <RxPencil2 />,
+  //   title: "Design",
+  //   description:
+  //     "The perfect harmony of beautiful imagery from texts, photos, cartoons, and videos and create a smooth user interface.",
+  // },
   {
     icon: <RxDesktop />,
     title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Web development is the art and science of creating and maintaining websites that work on the internet.",
   },
   {
     icon: <RxReader />,
     title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Copywriting is the act of writing text for the purpose of advertising and other forms of marketing.",
   },
   {
     icon: <RxRocket />,
     title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Search engine optimization can help more members of your target audience discover your business online.",
   },
 ];
 

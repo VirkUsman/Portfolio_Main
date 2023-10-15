@@ -29,9 +29,8 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              quo blanditiis vel consequuntur eius quasi magni ipsa laboriosam
-              doloremque labore?
+              We are what we repeatedly do. Excellence, then, is not an act but
+              a habit.
             </motion.p>
           </div>
 
