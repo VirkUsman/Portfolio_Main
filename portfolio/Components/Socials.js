@@ -7,10 +7,6 @@ import {
   RiYoutubeLine,
   RiFacebookLine,
   RiTwitterXLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
-  RiTwitterLine,
   RiFilePdf2Line,
 } from "react-icons/ri";
 
